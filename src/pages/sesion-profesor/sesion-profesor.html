@@ -1,0 +1,47 @@
+<!--
+  Generated template for the SesionProfesorPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header text-center>
+  <ion-navbar color="rojo-uam">
+    <ion-title>Sesión Profesor</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail item-left>
+        <div *ngIf="profesor.urlfoto"> 
+          <img src="{{profesor.urlfoto}}">  
+        </div>
+      </ion-thumbnail>
+      <h2>{{profesor.nombre}} {{profesor.apellido}} </h2>
+      <h4>{{profesor.cubiculo}} </h4>    
+    </ion-item>
+  </ion-list>  
+<ion-list>
+  <ion-list-header><h5 blanco text-center> Citas pendientes en este dia.  </h5></ion-list-header>
+  <div *ngFor="let cita of citasProximas">
+  <ion-item>
+    <ion-avatar item-left>
+      <img src="{{cita.urlFoto}}">
+    </ion-avatar>
+    <h3>{{cita.dia}} {{cita.fecha}}</h3>
+    <h4>{{cita.nombre}} {{cita.apellido}}</h4>
+    <p>{{cita.asunto}}</p>
+    <ion-note item-right> {{cita.horaInicio}} </ion-note>
+    <ion-note item-right> {{cita.horaFinal}} </ion-note>
+  </ion-item>
+</div>
+</ion-list>
+
+</ion-content>
+
+<ion-footer >
+    <ion-toolbar color="footer-uam"> 
+      <ion-icon menuToggle class="btn-menu-footer" color="blanco" name="menu"></ion-icon>
+    </ion-toolbar>
+</ion-footer>

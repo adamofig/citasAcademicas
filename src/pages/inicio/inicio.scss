@@ -1,0 +1,23 @@
+.inicio {
+ 
+}
+.boton-menu-slide{
+ background:  rgba(64,64,65,.6);;
+ color: white;
+ width: 20px;
+ height: 40px;
+ border-radius: 20%;
+ font-size: 20px;
+ padding-top: 5px;
+ position: fixed;
+
+ z-index: 100;
+}
+.boton-menu-abrir{
+top: 20%;
+right: 2%;
+}
+.boton-menu-cerrar{
+bottom: 20%;
+left: 3%;
+}

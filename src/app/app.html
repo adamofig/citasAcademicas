@@ -1,0 +1,30 @@
+<ion-menu side="right" type="reveal" id="menuEstudiante" [content]="content">
+
+  <ion-content class="degrade-principal">
+                  
+      <div text-center class="menu-title" ><h1>Menú</h1></div>
+      <div text-center class="boton-menu" (click)="abrirSesion()"><h2>Principal</h2></div>
+      <div text-center class="boton-menu"  (click)="abrirProgramar()"><h2>Programar Cita</h2></div>
+      <div text-center class="boton-menu"  (click)="abrirCalendario()"><h2>Calendario</h2></div>
+      <div text-center class="boton-menu"  (click)="abrirConfiguracion()"><h2>Opciones</h2></div>
+      <div text-center class="boton-menu"  (click)="abrirInicio()"><h2>Salir</h2></div>
+
+  </ion-content>
+</ion-menu>
+
+<ion-menu side="right" type="push" id="menuProfesor" [content]="content">
+
+   <ion-content class="degrade-principal">
+            
+      
+      <div text-center class="menu-title" ><h1>Menú</h1></div>
+      <div text-center class="boton-menu"  (click)="abrirSesionProfesor()"><h2>Principal</h2></div>
+      <div text-center class="boton-menu"  (click)="abrirCancelarCitas()"><h2>Aceptar/Cancelar Citas</h2></div>
+      <div text-center class="boton-menu"  (click)="abrirHorarioProfesor()"><h2>Horario</h2></div>
+      <div text-center class="boton-menu"  (click)="abrirConfiguracionProfesor()"><h2>Opciones</h2></div>
+      <div text-center class="boton-menu"  (click)="abrirInicio()"><h2>Salir</h2></div>
+
+  </ion-content>
+</ion-menu>
+
+<ion-nav #content swipeBackEnabled="false" [root]="rootPage"></ion-nav>

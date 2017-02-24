@@ -1,0 +1,134 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+
+$text-color:        #000;
+$background-color:  #fff;
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #387ef5, 
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222,
+  favorite:   #69BB7B,
+  rojo-uam: #BE1E2D,
+  blanco: #fff,
+  footer-uam: #7D0000,
+);
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+.menu-title{
+    height: 15%;
+    color: white;
+}
+.boton-menu{
+    height:12%;
+    color: white;
+}
+.estatica{
+    position: static;
+}
+.padding-icon{
+    position : static;
+    top: -100px; 
+    padding-left: 60px;
+    padding-right: 60px; 
+
+}
+
+.degrade-principal{
+    background: rgba(241,102,102,1);
+background: -moz-linear-gradient(top, rgba(241,102,102,1) 0%, rgba(176,49,49,1) 57%, rgba(71,0,0,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(241,102,102,1)), color-stop(57%, rgba(176,49,49,1)), color-stop(100%, rgba(71,0,0,1)));
+background: -webkit-linear-gradient(top, rgba(241,102,102,1) 0%, rgba(176,49,49,1) 57%, rgba(71,0,0,1) 100%);
+background: -o-linear-gradient(top, rgba(241,102,102,1) 0%, rgba(176,49,49,1) 57%, rgba(71,0,0,1) 100%);
+background: -ms-linear-gradient(top, rgba(241,102,102,1) 0%, rgba(176,49,49,1) 57%, rgba(71,0,0,1) 100%);
+background: linear-gradient(to bottom, rgba(241,102,102,1) 0%, rgba(176,49,49,1) 57%, rgba(71,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f16666', endColorstr='#470000', GradientType=0 );
+}
+
+.btn-blanco{
+    background: white;
+    color: black;
+}
+.sin-margen{
+    position: relative;
+    right: 10px;
+}
+
+.btn-menu-footer{
+    position: relative;
+    right: 15px;
+    font-size: 25px;
+}
+
+.alto-completo{
+    height:100%;
+}
+.separador-1{
+    width:50%;
+    height:5px;  
+    background:#ff0000; 
+}
+
+.separador-2{
+    width:80%;
+    height:5px;  
+    background-color: red; 
+}
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+
+$ionicons-font-path: "../assets/fonts";
+@import "ionicons";

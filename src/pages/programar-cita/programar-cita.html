@@ -1,0 +1,93 @@
+<!--
+  Generated template for the ProgramarCitaPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header text-center>
+  <ion-navbar color="rojo-uam">
+    <ion-title>Programar Cita</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h4>busca a un profesor para programar una cita</h4>
+  <ion-item>
+    <ion-label primary floating>Buscar profesor (Número Económico) </ion-label>
+    <ion-input [(ngModel)]="numeroEconomico" ></ion-input>
+  </ion-item>
+<br>
+  <button ion-button color="rojo-uam" full round (click)="buscarProfesor()"> Buscar </button>
+<br>
+ <div *ngIf="horarioDia">  
+  <ion-grid>
+  <ion-row>
+    <ion-col width-33><h5 text-center>dia</h5></ion-col>
+    <ion-col width-33><h5 text-center>hora Inicio</h5></ion-col>
+    <ion-col width-33><h5 text-center>hora Final</h5></ion-col>
+  </ion-row>
+
+  <div *ngFor="let horario of horarioDia">
+      <ion-row>
+    <ion-col width-33><h5 text-center>{{horario.dia}}</h5></ion-col>
+    <ion-col width-33><h5 text-center>{{horario.horaInicio}}</h5></ion-col>
+    <ion-col width-33><h5 text-center>{{horario.horaFinal}}</h5></ion-col>
+  </ion-row>
+    </div>
+  </ion-grid>
+  </div>
+<div *ngIf="mostrarFechas">
+  <ion-item >
+  <ion-label>Fecha</ion-label>
+  <ion-datetime displayFormat="DD/MM/YYYY" min="2016" [(ngModel)]="myDate"></ion-datetime>
+</ion-item>
+
+  <button ion-button full round color="rojo-uam"  (click)="buscarDisponibilidad()"> ver disponibilidad</button>
+  <br>
+   <div *ngIf="mostrarHoras">
+     <h6>{{horasDisponibles.dia}} {{myDate}}</h6>
+     <h6> {{mensaje}} </h6>
+    <div *ngFor="let hora of horasDisponibles.horasReservadas">
+       <h6> {{hora.horaInicioR}} - {{hora.horaFinalR}}</h6>
+     </div>
+     <h6> programa tu cita en horas disponibles </h6>
+     <ion-grid>
+       <ion-row>
+         <ion-col width-33>   
+         </ion-col>
+       </ion-row>
+     </ion-grid>
+       <ion-grid>
+          <ion-row>
+            <ion-col width-50>
+              <ion-item>
+                <ion-label stacked color="rojo-uam" >Hora Inicio</ion-label>
+                <ion-datetime [(ngModel)]="horario.horaInicio" hourValues="{{horasPermitidas}}" minuteValues="{{minutosPermitidos}}" cancelText="cancelar" doneText="ok" displayFormat="HH:mm"  ></ion-datetime>
+              </ion-item>
+            </ion-col>
+
+             <ion-col width-50>
+               <ion-item>
+                <ion-label stacked color="rojo-uam" >Hora Final</ion-label>
+                <ion-datetime [(ngModel)]="horario.horaFinal" hourValues="{{horasPermitidas}}" minuteValues="{{minutosPermitidos}}" cancelText="cancelar" doneText="ok" displayFormat="HH:mm"  ></ion-datetime>
+               </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+<ion-item>
+   <ion-label stacked>Asunto de la asesoría</ion-label>
+   <ion-textarea [(ngModel)]="asunto"></ion-textarea>
+ </ion-item>
+ <br>
+    <button ion-button color="rojo-uam" (click)="reservarCita()" full round>reserva tu cita</button>
+    </div>
+</div>
+  <br><br>
+</ion-content>
+
+     <ion-footer >
+       <ion-toolbar color="footer-uam"> 
+          <ion-icon menuToggle class="btn-menu-footer" color="blanco" name="menu"></ion-icon>
+       </ion-toolbar>
+     </ion-footer>

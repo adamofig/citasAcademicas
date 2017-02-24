@@ -1,0 +1,62 @@
+<!--
+  Generated template for the RegistroProfesorPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header text-center>
+  <ion-navbar color="rojo-uam">
+    <button  menuToggle>
+      <ion-icon  name="menu"></ion-icon>
+    </button>
+    <ion-title>UAM Citas - Registro de Profesor </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="degrade-principal" padding>
+
+<form [formGroup]="valoresForm" (ngSubmit)="registrarProfesor()">
+  <ion-list>
+    <ion-item>
+    <ion-label>Número Económico : </ion-label>
+    <ion-input formControlName="numeroEconomico" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Nombre : </ion-label>
+    <ion-input formControlName="nombre" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Apellido : </ion-label>
+    <ion-input formControlName="apellido" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Cubículo : </ion-label>
+    <ion-input formControlName="cubiculo" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Email : </ion-label>
+    <ion-input formControlName="correo" type="text"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>url de foto : </ion-label>
+    <ion-input formControlName="urlFoto" type="text" placeholder="(opcional) copia el link para tu foto"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Contraseña : </ion-label>
+    <ion-input formControlName="contrasena" type="password"></ion-input>
+  </ion-item>
+
+</ion-list>
+
+<div padding>
+  <button color="blanco" ion-button type="submit" [disabled]="!valoresForm.valid" blanco style="color:black" block> Registrese</button>
+</div>
+</form>
+
+</ion-content>
